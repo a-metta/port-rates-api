@@ -1,3 +1,7 @@
+import pandas as pd
+import json
+import os
+
 json_codes_file = open(
     os.path.join(os.path.dirname(__file__), "sea-ports-codes.json"), "r"
 )
