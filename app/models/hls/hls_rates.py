@@ -34,12 +34,12 @@ class HLSRate(BaseModel):
     CommodityDetail: str
     EffectiveDate: str
     ExpiryDate: str
-    GP20: int
-    GP40: int
-    HQ40: int
-    HQ45: int
+    GP20: float
+    GP40: float
+    HQ40: float
+    HQ45: float
     ID: str
-    NOR40: int
+    NOR40: float
     PldAMSCode: str
     PldName: str
     PlrAMSCode: str
@@ -54,14 +54,13 @@ class HLSRate(BaseModel):
     PrCode: str
     PricingType: str
     Remark: str
-    SOC20: int
-    SOC40: int
-    SOC40HQ: int
-    SOC45: int
-    SOCNOR40: int
+    SOC20: float
+    SOC40: float
+    SOC40HQ: float
+    SOCNOR40: float
     ServiceCode: str
-    TruckFee20: int
-    TruckFee40: int
+    TruckFee20: float
+    TruckFee40: float
     ViaAMSCode: str
     ViaName: str
     isSOC20: bool
@@ -69,6 +68,9 @@ class HLSRate(BaseModel):
     isSOC40HQ: bool
     isSOC45: bool
     isSOCNOR40: bool
+
+    class Config:
+        arbitrary_types_allowed = True
 
 
 class HLSRatesRequest(BaseModel):
